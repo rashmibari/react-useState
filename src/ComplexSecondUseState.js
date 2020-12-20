@@ -10,28 +10,16 @@ function ComplexSecondUseState() {
       .get("https://jsonplaceholder.typicode.com/posts/1/comments")
       .then(response => {
         let data = response.data;
-        console.log("after getting post data", response.data);
-
-        //setPost([...response.data]);
+        setPost([...post, ...data]);
       })
       .catch(error => {});
   }, []);
 
   let list =
     post.length &&
-    post.map(item => (
-      <ListGroupItem tag="a" href="#">
-        {item}
-      </ListGroupItem>
-    ));
+    post.map(item => <ListGroupItem>{item.email}</ListGroupItem>);
 
-  return (
-    <ListGroup>
-      <ListGroupItem tag="a" href="#">
-        {list}
-      </ListGroupItem>
-    </ListGroup>
-  );
+  return <ListGroup>{list}</ListGroup>;
 }
 
 export default ComplexSecondUseState;
