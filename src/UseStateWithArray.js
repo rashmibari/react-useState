@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
-function ComplexSecondUseState() {
+function UseStateWithArray() {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
@@ -17,9 +17,11 @@ function ComplexSecondUseState() {
 
   let list =
     post.length &&
-    post.map(item => <ListGroupItem>{item.email}</ListGroupItem>);
+    post.map(item => (
+      <ListGroupItem key={item.email}>{item.email}</ListGroupItem>
+    ));
 
   return <ListGroup>{list}</ListGroup>;
 }
 
-export default ComplexSecondUseState;
+export default UseStateWithArray;

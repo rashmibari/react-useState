@@ -37,7 +37,7 @@ let submitBtn = {
   marginTop: "10px"
 };
 
-function ComplexUseState() {
+function UseStateWithObject() {
   const [user, setUser] = useState(userDetails);
 
   const onSubmit = event => {
@@ -154,4 +154,4 @@ function ComplexUseState() {
   );
 }
 
-export default ComplexUseState;
+export default UseStateWithObject;

@@ -1,9 +1,8 @@
 import React from "react";
 import "./style.css";
 import SimpleUseState from "./SimpleUseState";
-import ComplexUseState from "./ComplexUseState";
-import ComplexSecondUseState from "./ComplexSecondUseState";
-
+import UseStateWithArray from "./UseStateWithArray";
+import UseStateWithObject from "./UseStateWithObject";
 export default function App() {
   return (
     <div
@@ -15,8 +14,8 @@ export default function App() {
       <h2> Simple Use State Example</h2>
       <SimpleUseState />
       <h2> Complex Use State Example</h2>
-      <ComplexUseState />
-      <ComplexSecondUseState />
+      <UseStateWithObject />
+      <UseStateWithArray />
     </div>
   );
 }
